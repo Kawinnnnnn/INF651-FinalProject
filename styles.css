@@ -1,0 +1,661 @@
+/* Global Styles */
+body {
+    font-family: 'New Times Roman';
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full page height */
+}
+
+/* Header *//* Global Styles */
+body {
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* Header */
+header {
+    background-color: #004080; /* Dark Blue */
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar nav a:hover {
+    color: #ddd; /* Light gray hover effect */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #00bfff; /* Bright blue links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #009acd; /* Darker blue on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #004080, #001a33);
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2.8em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #dcdcdc;
+    line-height: 1.8;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #008080; /* Teal */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #006666; /* Darker teal */
+}
+
+/* Loan Request Form */
+.loan-request-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Smooth shadow */
+}
+
+.loan-request-form h3 {
+    font-size: 1.4em;
+    color: #004080; /* Dark Blue */
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+input#captcha {
+    width: 100%;
+    max-width: 450px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+input#captcha:focus {
+    border-color: #004080; /* Highlighted border */
+    outline: none;
+}
+
+/* Range Slider */
+input[type="range"] {
+    width: 100%;
+    height: 8px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #6c757d;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]:hover {
+    background: #bbb;
+}
+
+/* Buttons */
+button {
+    background-color: #008080;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #006666;
+}
+
+/* CAPTCHA */
+#captchaContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#captchaCode {
+    font-weight: bold;
+    color: teal;
+    background: #f9f9f9;
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#refreshCaptcha {
+    background-color: #004080;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#refreshCaptcha:hover {
+    background-color: #00264d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar nav a {
+        margin: 0 5px;
+    }
+
+    .loan-request-form {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+}
+
+header {
+    background-color: #004080; /* Dark Blue */
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    flex: 1; /* Makes sure footer stays at the bottom */
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 40px; /* Creates space above the footer */
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: lightblue; /* Set links to light blue */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Optional: Make links bold */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #004080, #000);
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        background: #0000FF; /* Start with blue */
+    }
+    100% {
+        opacity: 1;
+        background: linear-gradient(135deg, #004080, #000); /* Smooth blue to black */
+    }
+}
+
+/* Hero Title */
+.hero h2 {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Cool shadow effect */
+    animation: textFadeIn 3s ease-in-out;
+}
+
+/* Hero Paragraph */
+.hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 15px auto;
+    color: #dcdcdc; /* Light gray for better readability */
+    line-height: 1.8em;
+    animation: textFadeIn 4s ease-in-out;
+}
+
+/* Text Fade Animation */
+@keyframes textFadeIn {
+    0% {
+        color: transparent; /* Text starts invisible */
+    }
+    100% {
+        color: white; /* Ends with white text */
+    }
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #008080; /* Teal */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #006666; /* Darker Teal */
+}
+
+/* Poster Section */
+.poster-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.poster-section h3 {
+    color: #004080; /* Dark Blue */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.poster {
+    display: inline-block;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+}
+
+.poster p {
+    padding: 15px;
+    font-size: 1em;
+    color: #333333;
+}
+
+/* Loan Request Form */
+.loan-request-form {
+    max-width: 500px; 
+    margin: 20px auto; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Light background for readability */
+    text-align: left; /* Align text to the left for better form flow */
+}
+
+/* Styling the slider track */
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 100%; /* Make it span the container width */
+    height: 8px; /* Set the track height */
+    background: #d3d3d3; /* Light gray for the track */
+    border-radius: 5px; /* Rounded track */
+    outline: none; /* Remove focus outline */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Styling the slider thumb (the draggable circle) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 20px; /* Circle size */
+    height: 20px; /* Circle size */
+    background: #6c757d; /* Dark gray for the thumb */
+    border-radius: 50%; /* Make it a perfect circle */
+    cursor: pointer; /* Pointer on hover */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #6c757d;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #6c757d;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Change track color when hovered */
+input[type="range"]:hover {
+    background: #bbb; /* Slightly darker gray */
+}
+
+/* Input Fields */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+input#captcha {
+    width: 50%; /* Reduce the width of the input box */
+    max-width: 150px; /* Set a maximum width */
+    padding: 8px; /* Adjust padding for better appearance */
+    font-size: 0.9em; /* Make the text slightly smaller */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px; /* Add space between label and input box */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="file"] {
+    width: 100%; /* Make the input fields take full width of their container */
+    max-width: 400px; /* Optional: Set a maximum width for better aesthetics */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+button {
+    background-color: #008080; /* Teal */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #006666; /* Darker Teal */
+}
+
+/* Error/Required Fields */
+.required {
+    color: red; /* Mark required fields with red */
+}
+
+input[required]:invalid {
+    border-color: red; /* Highlight invalid fields */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .loan-request-form {
+        max-width: 90%; /* Ensure the form doesn't stretch too wide on small screens */
+        padding: 20px;
+    }
+
+    .navbar nav a {
+        margin: 0 5px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    .poster-section h3 {
+        font-size: 1.5em;
+    }
+
+    .poster {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #ffffff; /* Clean white background */
+    padding: 50px 20px; /* Generous spacing for readability */
+    margin: 20px auto;
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1200px; /* Centered content */
+    text-align: center; /* Aligns the text */
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    color: #004080; /* Matches the theme with Dark Blue */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideIn 1.5s ease-in-out; /* Adds animation */
+}
+
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.8em; /* Improves readability */
+    color: #555555; /* Soft gray for balance */
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInText 2s ease-in-out;
+}
+
+.about-us .team-section {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.team-member {
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+    background-color: #f9f9f9; /* Slight contrast background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Card effect */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #004080; /* Ties it to the theme */
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    color: #004080;
+    margin: 15px 0 10px;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #666666;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .team-member {
+        width: 100%; /* Stack team members on smaller screens */
+    }
+
+    .about-us h2 {
+        font-size: 2em; /* Adjust title size */
+    }
+
+    .about-us p {
+        font-size: 1em; /* Adjust text size */
+    }
+}
+
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+.slider-value {
+    margin: 5px 0;
+    font-weight: bold;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Loan - MONEY HUB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>MONEY HUB</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="form.html">Apply for Loan</a>
+                <a href="about.html">About Us</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="loan-request-form">
+            <h2>Apply for a Loan</h2>
+
+            <!-- Loan Amount and Term -->
+            <section>
+                <label for="amountSlider">Loan Amount (USD) <span class="required">*</span></label>
+                <div class="slider-value" id="amountValue">7,600 USD</div>
+                <input type="range" id="amountSlider" min="1000" max="20000" step="100" value="7600" required>
+
+                <label for="termSlider">Repayment Term (Months) <span class="required">*</span></label>
+                <div class="slider-value" id="termValue">60 Months</div>
+                <input type="range" id="termSlider" min="6" max="60" step="6" value="60" required>
+
+                <label>Estimated Monthly Payment</label>
+                <div class="estimated-payment" id="estimatedPayment">268 USD</div>
+            </section>
+
+            <!-- Personal Information -->
+            <section>
+                <h3>Your Information</h3>
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </section>
+
+            <!-- Documents -->
+            <section>
+                <h3>Upload Documents</h3>
+                <label for="idProof">Government-issued ID <span class="required">*</span></label>
+                <input type="file" id="idProof" required>
+
+                <label for="incomeProof">Proof of Income <span class="required">*</span></label>
+                <input type="file" id="incomeProof" required>
+
+                <label for="addressProof">Proof of Address <span class="required">*</span></label>
+                <input type="file" id="addressProof" required>
+            </section>
+
+            <!-- CAPTCHA -->
+            <section>
+                <h3>Security Verification</h3>
+                <div id="captchaContainer" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                    <div id="captchaCode" style="font-size: 1.2em; font-weight: bold; color: teal; background: #f4f4f4; padding: 8px 12px; border: 2px solid #ccc; border-radius: 5px;">12345</div>
+                    <button type="button" id="refreshCaptcha" style="background-color: #004080; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer;">Refresh</button>
+                </div>
+                <input type="text" id="captchaInput" placeholder="Enter the CAPTCHA code" required
+                       style="width: 100%; max-width: 400px; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px;">
+            </section>
+
+            <!-- Consent -->
+            <section>
+                <label>
+                    <input type="checkbox" id="consent" required>
+                    I agree to the terms and conditions and authorize background checks.
+                </label>
+            </section>
+
+            <button type="button" id="submitButton">Submit</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
